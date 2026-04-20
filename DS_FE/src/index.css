@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
