@@ -6,11 +6,11 @@ Shop management system for small Indian retail owners to track daily sales, stoc
 
 ```
 dailysales/
-├── ds_be/   # Node.js + Express + TypeScript REST API
-└── ds_fe/   # React + TypeScript dashboard
+├── DS_BE/   # Node.js + Express + TypeScript REST API
+└── DS_FE/   # React + TypeScript dashboard
 ```
 
-## ds_be — Backend
+## DS_BE — Backend
 
 **Stack:** Node.js · Express · TypeScript · MongoDB · JWT · Google OAuth
 
@@ -22,7 +22,7 @@ dailysales/
 
 → [Setup & API docs](./ds_be/README.md)
 
-## ds_fe — Frontend
+## DS_FE — Frontend
 
 **Stack:** React · TypeScript · Tailwind CSS · Recharts · Zustand
 
