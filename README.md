@@ -20,8 +20,6 @@ dailysales/
 - Reports: daily / weekly / monthly / yearly analytics
 - Auto alerts: low stock and price loss warnings
 
-→ [Setup & API docs](./ds_be/README.md)
-
 ## DS_FE — Frontend
 
 **Stack:** React · TypeScript · Tailwind CSS · Recharts · Zustand
@@ -30,8 +28,6 @@ dailysales/
 - Full shift flow: start, add stock, close with live calculation preview
 - Reports page with bar charts and time-range switcher (day/week/month/year)
 
-→ [Setup & docs](./ds_fe/README.md)
-
 ## Quick Start
 
 ```bash
@@ -39,5 +35,3 @@ git clone https://github.com/akashtyagi03/dailysales
 cd dailysales/ds_be && npm install && npm run dev   # API on :5000
 cd ../ds_fe && npm install && npm run dev           # App on :5173
 ```
-
-Live → **[dailysales.vercel.app](https://dailysales.vercel.app)**
