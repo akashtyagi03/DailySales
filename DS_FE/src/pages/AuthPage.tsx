@@ -47,7 +47,7 @@ export function AuthPage({ mode = "page", onClose, redirectTo = "/dashboard" }: 
   };
 
   return (
-    <div className={`${isModal ? "font-sans text-[#0f172a]" : "min-h-screen bg-[#f8fafc] relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-6 font-sans text-[#0f172a]"}`}>
+    <div className={`${isModal ? "font-sans text-[#0f172a] min-h-full flex flex-col items-center justify-center py-2" : "min-h-screen bg-[#f8fafc] relative overflow-hidden flex flex-col items-center justify-center p-4 sm:p-6 font-sans text-[#0f172a]"}`}>
       {!isModal && (
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden pointer-events-none -z-10">
           <div className="absolute top-[-10%] left-[-20%] w-[50%] h-[50%] rounded-full bg-green-100/50 blur-[120px] animate-pulse"></div>
@@ -72,7 +72,7 @@ export function AuthPage({ mode = "page", onClose, redirectTo = "/dashboard" }: 
       `}</style>
 
       {/* Logo & Headline Section */}
-      <div className={`animate-reveal flex flex-col items-center text-center max-w-sm ${isModal ? "mb-6" : "mb-10"}`}>
+      <div className={`animate-reveal flex flex-col items-center text-center max-w-sm ${isModal ? "mb-5" : "mb-10"}`}>
         <div className="w-14 h-14 bg-[#1D9E75] rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-green-200 transition-transform duration-500 hover:scale-110">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" className="w-7 h-7">
             <path d="M3 3v18h18" strokeLinecap="round" strokeLinejoin="round" />
