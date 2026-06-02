@@ -21,9 +21,22 @@ if (!MONGO_URI) {
 }
 
 app.use(express.json());
+// Allow one or more frontend origins (comma-separated in FRONTEND_ORIGIN)
+const rawFrontendOrigins = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
+const allowedOrigins = rawFrontendOrigins.split(",").map((s) => s.trim()).filter(Boolean);
+
 app.use(
     cors({
-        origin: process.env.FRONTEND_ORIGIN || "http://localhost:5173",
+        origin: (origin, callback) => {
+            // allow non-browser or same-origin requests (no origin)
+            if (!origin) return callback(null, true);
+
+            if (allowedOrigins.includes(origin)) {
+                return callback(null, true);
+            }
+
+            return callback(new Error(`CORS origin denied: ${origin}`));
+        },
     })
 );
 
